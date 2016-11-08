@@ -1,5 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+compile 'com.squareup.okhttp3:okhttp:3.4.2'
 buildscript {
     repositories {
         jcenter()
