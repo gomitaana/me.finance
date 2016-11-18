@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Me.finance</string>
+    <string name="title_activity_main">Me.Finance</string>
+
+    <string name="lbl_btn_income">Income</string>
+    <string name="lbl_btn_bill">Bill</string>
+    <string name="lbl_btn_payment">Payment</string>
+
+    <string name="income_amount">Monto</string>
+    <string name="income_name">Nombre</string>
+    <string name="income_description">Descripción</string>
+
+    <string name="bill_paid_date">Fecha de pago</string>
+    <string name="bill_due_date">Fecha límite de pago</string>
+    <string name="bill_name">Nombre</string>
+    <string name="bill_description">Descripción</string>
+    <string name="bill_amount">Monto</string>
+    <string name="bill_is_paid">Pagado</string>
+
+    <string name="payment_paid_date">Fecha de pago</string>
+    <string name="payment_name">Nombre</string>
+    <string name="payment_description">Descripción</string>
+    <string name="payment_amount">Monto</string>
+
+    <string name="title_activity_statistics">Estadísticas</string>
+    <string name="title_activity_settings">Configuración</string>
+    <string name="title_activity_data">Datos</string>
+    <string name="title_activity_form">Forma</string>
+
 </resources>

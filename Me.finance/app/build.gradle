@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
-
+    buildToolsVersion "24.0.0"
     defaultConfig {
-        applicationId "froyo.itesm.mx.mefinance"
-        minSdkVersion 21
+        applicationId "com.myproject.mefinance"
+        minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -19,9 +19,23 @@ android {
     }
 }
 
+ext {
+    //Version
+    supportLibrary = '24.0.0'
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${supportLibrary}"
+    compile "com.android.support:design:${supportLibrary}"
+    compile "com.android.support:support-v4:${supportLibrary}"
+
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'joda-time:joda-time:2.9.4'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
-    compile 'com.squareup.okhttp3:okhttp:3.4.2'
 }
