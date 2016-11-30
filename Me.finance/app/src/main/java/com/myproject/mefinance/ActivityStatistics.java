@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.content.SharedPreferences;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -111,16 +112,17 @@ public class ActivityStatistics extends AppCompatActivity {
 
         dataListLabels = new ArrayList<>();
 
-        dataListLabels.add("January");
-        dataListLabels.add("February");
-        dataListLabels.add("March");
-        dataListLabels.add("April");
-        dataListLabels.add("May");
-        dataListLabels.add("June");
+        dataListLabels.add("July");
+        dataListLabels.add("August");
+        dataListLabels.add("September");
+        dataListLabels.add("October");
+        dataListLabels.add("November");
+        dataListLabels.add("December");
+
     }
 
     public void loadChart(ArrayList<Entry> entries){
-        LineDataSet dataSet = new LineDataSet(entries, ("Hola Mundo"));
+        LineDataSet dataSet = new LineDataSet(entries, ("Money"));
         dataSet.disableDashedLine();
         dataSet.setValueTextColor(getResources().getColor(R.color.colorPrimaryText));
         dataSet.setValueTextSize(16f);
@@ -136,7 +138,7 @@ public class ActivityStatistics extends AppCompatActivity {
         chart.setData(data);
 
         chart.animateY(2500);
-        chart.setDescription("Esta es la descripción");
+        chart.setDescription("Table of the month");
         chart.getXAxis().setTextColor(getResources().getColor(R.color.colorPrimaryText));
         chart.getAxisLeft().setTextColor(getResources().getColor(R.color.colorPrimaryText));
         chart.getAxisRight().setTextColor(getResources().getColor(R.color.colorPrimaryText));

@@ -105,15 +105,6 @@ public class ActivityForm extends AppCompatActivity {
 
     }
 
-    public void initializeListeners(){
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showMessage("Aquí...");
-            }
-        });
-    }
-
     public void loadData(){
         if(type.equals("income")){
             layoutIncome.setVisibility(View.VISIBLE);
@@ -147,5 +138,15 @@ public class ActivityForm extends AppCompatActivity {
         }
         return false;
     }
+
+    public void initializeListeners(){
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //showMessage("Aquí...");   -> Add a new payment
+            }
+        });
+    }
+
 
 }

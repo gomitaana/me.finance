@@ -19,7 +19,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/MF_cyan"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -42,11 +42,18 @@
                 android:fillViewport="true"
                 android:layout_gravity="center"
                 >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    app:srcCompat="@drawable/mefinances"
+                    android:id="@+id/imageView"
+                    android:layout_height="390dp" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimaryText"
-                    android:text="Hola Mundo"
+                    android:textColor="@color/MF_cyan"
+                    android:text="Selecciona una opción:"
                     android:textSize="24sp"
                     android:textAlignment="center"
                     android:layout_marginTop="16dp"
@@ -61,11 +68,11 @@
                     style="?android:attr/borderlessButtonStyle"
                     android:paddingRight="8dp"
                     android:paddingLeft="8dp"
-                    android:text="@string/lbl_btn_income"
+                    android:text="Ingreso"
                     android:layout_marginTop="24dp"
                     android:onClick="manageIncome"
                     android:textSize="17sp"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/MF_darkgray"
                     android:textStyle="bold"
                     />
                 <Button
@@ -77,11 +84,11 @@
                     style="?android:attr/borderlessButtonStyle"
                     android:paddingRight="8dp"
                     android:paddingLeft="8dp"
-                    android:text="@string/lbl_btn_bill"
+                    android:text="Pago"
                     android:layout_marginTop="24dp"
                     android:onClick="manageBill"
                     android:textSize="17sp"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/MF_darkgray"
                     android:textStyle="bold"
                     />
                 <Button
@@ -93,24 +100,16 @@
                     style="?android:attr/borderlessButtonStyle"
                     android:paddingRight="8dp"
                     android:paddingLeft="8dp"
-                    android:text="@string/lbl_btn_payment"
+                    android:text="Gasto"
                     android:layout_marginTop="24dp"
                     android:onClick="managePayment"
                     android:textSize="17sp"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/MF_darkgray"
                     android:textStyle="bold"
                     />
             </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </android.support.design.widget.CoordinatorLayout>

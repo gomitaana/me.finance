@@ -19,7 +19,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/MF_cyan"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryText"
-            android:text="Income"
+            android:text="Ingreso"
             android:textSize="24sp"
             android:textAlignment="center"
             android:layout_marginTop="16dp"
@@ -49,7 +49,10 @@
             android:id="@+id/income_amount"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:textColorLink="@color/MF_secondprimary" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +60,8 @@
             android:id="@+id/income_name"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,7 +69,7 @@
             android:id="@+id/income_description"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryText"
-            android:text="Bill"
+            android:text="Pago"
             android:textSize="24sp"
             android:textAlignment="center"
             android:layout_marginTop="16dp"
@@ -92,17 +96,21 @@
             android:layout_height="wrap_content"
             android:hint="@string/bill_paid_date"
             android:id="@+id/bill_paid_date"
+            android:inputType="date"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/bill_due_date"
             android:id="@+id/bill_due_date"
+            android:inputType="date"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +118,8 @@
             android:id="@+id/bill_name"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,15 +127,17 @@
             android:id="@+id/bill_description"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/bill_amount"
             android:id="@+id/bill_amount"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,7 +145,7 @@
             android:id="@+id/bill_is_paid"
             android:layout_gravity="center"
             android:checked="false"
-            />
+            android:textColorLink="@color/MF_secondprimary" />
 
     </LinearLayout>
     <LinearLayout
@@ -151,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryText"
-            android:text="Payment"
+            android:text="Gasto"
             android:textSize="24sp"
             android:textAlignment="center"
             android:layout_marginTop="16dp"
@@ -161,9 +172,11 @@
             android:layout_height="wrap_content"
             android:hint="@string/payment_paid_date"
             android:id="@+id/payment_paid_date"
+            android:inputType="date"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -171,7 +184,8 @@
             android:id="@+id/payment_name"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -179,15 +193,17 @@
             android:id="@+id/payment_description"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/payment_amount"
             android:id="@+id/payment_amount"
+            android:inputType="numberDecimal"
             android:textColor="@color/colorPrimaryText"
             android:textColorHint="@color/colorDivider"
-            />
+            android:textColorLink="@color/MF_secondprimary"
+            android:singleLine="true" />
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -196,6 +212,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/MF_primary" />
 
 </android.support.design.widget.CoordinatorLayout>

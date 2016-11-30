@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.content.SharedPreferences;
 
 public class ActivityData extends AppCompatActivity {
 
@@ -20,7 +21,6 @@ public class ActivityData extends AppCompatActivity {
     private ActionBar actionBar;
     private Context context = this;
     private View coordinatorLayoutView;
-    private FloatingActionButton fab;
     private Button btnIncome, btnBill, btnPayment;
 
     @Override
@@ -35,12 +35,8 @@ public class ActivityData extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if(id == android.R.id.home){
             super.onBackPressed();
         }
@@ -63,7 +59,7 @@ public class ActivityData extends AppCompatActivity {
 
     public void initializeComponents(){
         coordinatorLayoutView = findViewById(R.id.coordinatorLayout);
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab = (FloatingActionButton) findViewById(R.id.fab);
 
         btnIncome  = (Button) findViewById(R.id.btn_income);
         btnBill    = (Button) findViewById(R.id.btn_bill);
@@ -72,12 +68,7 @@ public class ActivityData extends AppCompatActivity {
     }
 
     public void initializeListeners(){
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showMessage("Aquí...");
-            }
-        });
+
     }
 
     public void showMessage(String message){

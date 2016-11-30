@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/MF_cyan"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -42,16 +42,16 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/MF_primary"
                 >
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fab_data"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="@dimen/fab_margin"
-                    app:srcCompat="@android:drawable/ic_dialog_email"
+                    app:srcCompat="@drawable/ic_add_white_24dp"
                     app:borderWidth="12dp"
-                    />
+                    app:backgroundTint="@color/Gray" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,16 +60,16 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/MF_secondprimary"
                 >
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fab_statistics"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="@dimen/fab_margin"
-                    app:srcCompat="@android:drawable/ic_dialog_email"
+                    app:srcCompat="@drawable/ic_trending_up_white_24dp"
                     app:borderWidth="12dp"
-                    />
+                    app:backgroundTint="@color/Gray" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -79,15 +79,34 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
-            >
-            <TextView
+            android:background="@color/MF_lightcolor">
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="$1,000.00"
-                android:textColor="@color/colorTextIcons"
-                android:textSize="56sp"
-                android:textAlignment="center"
-                />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Dinero del día para gastar:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_weight="0.26"
+                    android:gravity="center"
+                    android:textColor="@color/White"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$1,000.00"
+                    android:textColor="@color/colorTextIcons"
+                    android:textSize="56sp"
+                    android:textAlignment="center"
+                    android:layout_weight="0.13" />
+
+            </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,43 +121,41 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/MF_cyan"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    >
+                    android:background="@color/MF_cyan">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:text="Hola Mundo"
+                        android:text="Gasta menos del 30% de tus ingresos de renta"
                         android:textColor="@color/colorTextIcons"
-                        android:textSize="18sp"
-                        android:gravity="center"
+                        android:textSize="14sp"
                         android:id="@+id/text_1"
-                        />
+                        android:gravity="center" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:text="Hola Mundo"
+                        android:text="Compara precios en diferentes tiendas"
                         android:textColor="@color/colorTextIcons"
-                        android:textSize="18sp"
-                        android:gravity="center"
+                        android:textSize="14sp"
                         android:id="@+id/text_2"
-                        />
+                        android:autoText="false"
+                        android:gravity="center" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:text="Hola Mundo"
+                        android:text="Ahorra del 10 al 15% de tus ingresos"
                         android:textColor="@color/colorTextIcons"
-                        android:textSize="18sp"
-                        android:gravity="center"
+                        android:textSize="14sp"
                         android:id="@+id/text_3"
-                        />
+                        android:gravity="center" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -148,7 +165,7 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/MF_primary"
                 >
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fab_settings"
@@ -157,7 +174,7 @@
                     android:layout_margin="@dimen/fab_margin"
                     app:srcCompat="@drawable/ic_settings_white_24dp"
                     app:borderWidth="12dp"
-                    />
+                    app:backgroundTint="@color/Gray" />
             </LinearLayout>
         </LinearLayout>
 
