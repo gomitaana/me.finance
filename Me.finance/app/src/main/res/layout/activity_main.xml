@@ -87,7 +87,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:text="Dinero del día para gastar:"
+                    android:text="Dinero para gastar:"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView3"
@@ -99,11 +99,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="$1,000.00"
                     android:textColor="@color/colorTextIcons"
                     android:textSize="56sp"
                     android:textAlignment="center"
-                    android:layout_weight="0.13" />
+                    android:layout_weight="0.13"
+                    android:id="@+id/text_mes" />
 
             </LinearLayout>
 
@@ -174,7 +174,8 @@
                     android:layout_margin="@dimen/fab_margin"
                     app:srcCompat="@drawable/ic_settings_white_24dp"
                     app:borderWidth="12dp"
-                    app:backgroundTint="@color/Gray" />
+                    app:backgroundTint="@color/Gray"
+                    android:visibility="invisible" />
             </LinearLayout>
         </LinearLayout>
 

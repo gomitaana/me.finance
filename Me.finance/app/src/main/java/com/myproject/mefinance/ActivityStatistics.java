@@ -46,6 +46,26 @@ public class ActivityStatistics extends AppCompatActivity {
         loadChart(dataListEntries);
     }
 
+    float initializeGraph(){
+        double money=0.0;
+        SharedPreferences shf = getSharedPreferences("ingresoTotal", MODE_WORLD_READABLE);
+        String strPref = shf.getString("ingresoTotal", null);
+        if(strPref != null) {
+            money += Double.parseDouble(strPref);
+            shf = getSharedPreferences("pagoTotal", MODE_WORLD_READABLE);
+            strPref = shf.getString("pagoTotal", null);
+            if(strPref != null) {
+                money -= Double.parseDouble(strPref);
+            }
+            shf = getSharedPreferences("gastoTotal", MODE_WORLD_READABLE);
+            strPref = shf.getString("gastoTotal", null);
+            if(strPref != null) {
+                money -= Double.parseDouble(strPref);
+            }
+        }
+        return (float)money;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -101,14 +121,15 @@ public class ActivityStatistics extends AppCompatActivity {
     }
 
     public void loadEntries(){
+        float money = initializeGraph();
         dataListEntries = new ArrayList<>();
 
-        dataListEntries.add(new Entry(4f, 0));
-        dataListEntries.add(new Entry(8f, 1));
-        dataListEntries.add(new Entry(6f, 2));
-        dataListEntries.add(new Entry(2f, 3));
-        dataListEntries.add(new Entry(18f, 4));
-        dataListEntries.add(new Entry(9f, 5));
+        dataListEntries.add(new Entry(0f, 0));
+        dataListEntries.add(new Entry(0f, 1));
+        dataListEntries.add(new Entry(0f, 2));
+        dataListEntries.add(new Entry(0f, 3));
+        dataListEntries.add(new Entry(money, 4));
+        dataListEntries.add(new Entry(0f, 5));
 
         dataListLabels = new ArrayList<>();
 
@@ -122,7 +143,7 @@ public class ActivityStatistics extends AppCompatActivity {
     }
 
     public void loadChart(ArrayList<Entry> entries){
-        LineDataSet dataSet = new LineDataSet(entries, ("Money"));
+        LineDataSet dataSet = new LineDataSet(entries, ("Dinero"));
         dataSet.disableDashedLine();
         dataSet.setValueTextColor(getResources().getColor(R.color.colorPrimaryText));
         dataSet.setValueTextSize(16f);

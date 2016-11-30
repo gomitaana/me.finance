@@ -6,7 +6,7 @@
 
     <ImageView android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@color/White"
+        android:src="@color/White_nocolor"
         android:scaleType="centerCrop"
         android:background="@drawable/mefinances"
         android:layout_alignParentTop="true"

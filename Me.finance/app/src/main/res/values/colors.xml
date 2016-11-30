@@ -231,4 +231,5 @@
     <color name="MF_lightcolor">#b2ebf2</color>
     <color name="MF_cyan">#009688</color>
     <color name="MF_darkgray">#757575</color>
+    <color name="White_nocolor">#00ffffff</color>
 </resources>
