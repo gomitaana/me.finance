@@ -128,8 +128,8 @@ public class ActivityStatistics extends AppCompatActivity {
         dataListEntries.add(new Entry(0f, 1));
         dataListEntries.add(new Entry(0f, 2));
         dataListEntries.add(new Entry(0f, 3));
-        dataListEntries.add(new Entry(money, 4));
-        dataListEntries.add(new Entry(0f, 5));
+        dataListEntries.add(new Entry(0f, 4));
+        dataListEntries.add(new Entry(money, 5));
 
         dataListLabels = new ArrayList<>();
 
